@@ -1,7 +1,7 @@
 # Impact-among-Convolution-Layers
 
-Code for study of imapct among convolution layres on convolution Neural Networks.
-The code shows three diferent convoution neural networks. The networks has 2-conv layers, 4-conv layers and 6-conv layers.
+Code for study of imapct among convolution layres on convolution Neural Networks.<br />
+The code shows three diferent convoution neural networks. The networks has 2-conv layers, 4-conv layers and 6-conv layers.<br />
 
 Folders:
 Cifar10 - Code for Cifar-10 dataset
