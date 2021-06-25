@@ -1,7 +1,7 @@
 # Impact-among-Convolution-Layers
 
-Code for study of imapct among convolution layres on convolution Neural Networks (CNN).<br />
-Three diferent CNN are shown. Fisrt CNN with 2-conv layers, nxt a CNN 4-conv layers, and the last a 6-conv layers CNN.<br />
+Code for study of impact among convolution layres on convolution Neural Networks (CNN).<br />
+Three diferent CNN are showed. The fisrt CNN have 2-conv layers, the next one CNN 4-conv layers, and the last with 6-conv layers CNN.<br />
 
 The main branch has thre folders.<br />
 Cifar10 - Code for Cifar-10 dataset<br />
