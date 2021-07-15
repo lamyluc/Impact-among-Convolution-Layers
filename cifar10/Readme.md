@@ -9,6 +9,6 @@ Model2_p2.m - CNN with 2 conv layer.<br />
 Model3_p2.m - CNN with 4 conv layer.<br />
 Model4_p2.m - CNN with 6 conv layer.<br />
 
-For models 1, the experimental table is [L12]().<br />
+For models 1, the experimental table is [L12](https://www.york.ac.uk/depts/maths/tables/l12.gif).<br />
 For models 2 and 3, the experimental table is [L16](https://www.york.ac.uk/depts/maths/tables/l16.htm).<br />
 For model4, the experimental table is [L32](https://www.york.ac.uk/depts/maths/tables/l32.htm).<br />
