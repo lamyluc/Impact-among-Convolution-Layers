@@ -20,18 +20,4 @@ For model4, the experimental table is [L32](https://www.york.ac.uk/depts/maths/t
 2-Download the scripts.<br />
 3-When use it, be aware of change the paths in scripts.<br />
 
-# Repository Structure
-
-Impact-among-Convolution-Layers<br />
-├── cifar10<br />
-│   ├── Model1_p2.m <br />
-│   ├── Model2_p2.m <br />
-│   ├── Model3_p2.m <br />
-│   └── Model4_p2.m <br />
-├── MNIST<br />
-│   ├── Model1_p2.m <br />
-│   ├── Model2_p2.m <br />
-│   ├── Model3_p2.m <br />
-│   └── Model4_p2.m <br />
-└── README.md<br />
 
