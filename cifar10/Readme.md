@@ -22,19 +22,16 @@ For model4, the experimental table is [L32](https://www.york.ac.uk/depts/maths/t
 
 # Repository Structure
 
-Impact-among-Convolution-Layers
-├── cifar10
-│   ├── AlexNet.py
-│   ├── densenet.py
-│   ├── fc1.py
-│   ├── LeNet5.py
-│   ├── resnet.py
-│   └── vgg.py
-├── mnist
-│   ├── AlexNet.py
-│   ├── fc1.py
-│   ├── LeNet5.py
-│   ├── resnet.py
-│   └── vgg.py
-└── README.md
+Impact-among-Convolution-Layers<br />
+├── cifar10<br />
+│   ├── Model1_p2.m <br />
+│   ├── Model2_p2.m y<br />
+│   ├── Model3_p2.m <br />
+│   └── Model4_p2.m <br />
+├── mnist<br />
+│   ├── Model1_p2.m <br />
+│   ├── Model2_p2.m y<br />
+│   ├── Model3_p2.m <br />
+│   └── Model4_p2.m <br />
+└── README.md<br />
 
