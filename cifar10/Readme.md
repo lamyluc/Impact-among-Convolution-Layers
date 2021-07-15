@@ -28,7 +28,7 @@ Impact-among-Convolution-Layers<br />
 │   ├── Model2_p2.m y<br />
 │   ├── Model3_p2.m <br />
 │   └── Model4_p2.m <br />
-├── mnist<br />
+├── mnist<br/>
 │   ├── Model1_p2.m <br />
 │   ├── Model2_p2.m y<br />
 │   ├── Model3_p2.m <br />
