@@ -23,8 +23,8 @@ L=[
 [L_i,L_j]=size(L);
 nivel=max(L);
 
-%sustituir parametros linha=fator, coluna=valores dos niveis
-%colocar variaveis escritas por ultimo
+%Replace hyperparameters, line=factor, column=levels
+%Set the hyperparameters non-numeric last
 nivel_par=[3 7; %fs1
            32 64; %nf1
            3 7; %fs2
@@ -40,7 +40,7 @@ nivel_par=[3 7; %fs1
            ];
        [n_p_i,n_p_j]=size(nivel_par);
 
-%troca
+%Replace the hyperparametrs values in experimental table
 for i=1:nivel
     for j=1:(min(L_j,n_p_i))
         aux=L(:,j)==i;
@@ -49,16 +49,16 @@ for i=1:nivel
 end
 M;
 
-%acha os valores a ser trocado por letras
+%Replace the hyperparametrs values in experimental table
 [f_i,f_j]=find(M==9);
 [f2_i,f2_j]=find(M==99);
 [f3_i,f3_j]=find(M==999);
 
 
-%cria a matriz versão cell
+%format transformation
 M2=num2cell(M);
 
-%substitui os valores escritos
+%Replace the hyperparametrs values in experimental table
 for i=1:numel(f_i)
     M2{f_i(i),f_j(i)}='reluLayer';
 end
@@ -67,7 +67,7 @@ for i=1:numel(f2_i)
 end
 M2;
 
-%tabela experimental já com os parametros
+%Experimental table
 [M_i,M_j]=size(M);
 
 %-------------------------------------------------------------------------
@@ -81,7 +81,7 @@ imds=augmentedImageDatastore([32 32], image_train);
 imdsValidation=augmentedImageDatastore([32 32], image_test);
 
 
-%variaveis para plots
+%variables used for plots
 TrainingLoss={};
 ValidationLoss={};
 TrainingAccuracy={};
@@ -119,7 +119,7 @@ for i=1:L_i
         softmaxLayer("Name","softmax")
         classificationLayer("Name","classoutput")];
     
-    %Definir Options
+    %Set Options
     options = trainingOptions('sgdm', ...
         'MaxEpochs',100, ...
         'ValidationData',imdsValidation, ...
@@ -131,27 +131,27 @@ for i=1:L_i
         'OutputFcn',@(info)stopIfAccuracyNotImproving(info,5));
     
     try
-        %treinar a rede
+       %Training network
         tic;
         [Net,info]=trainNetwork(imds,layers,options);
         toc;
         t=toc;
         
-        %salvar resultado experimental
+       %Save results
         filename='Result';
         local=strcat('A',num2str(i));
         escrita=[i Param info.TrainingAccuracy(end) info.TrainingLoss(end) info.FinalValidationAccuracy info.FinalValidationLoss];
         path3=''; %path for write  the results
         xlswrite([path 3 '\Result.xls'],escrita,1,local)
         
-        %Salvar informações de todos os treinamentos
+        %Save results of all trainings
         TrainingLoss=[TrainingLoss; info.TrainingLoss];
         ValidationLoss=[ValidationLoss; info.ValidationLoss];
         TrainingAccuracy=[TrainingAccuracy;info.TrainingAccuracy];
         ValidationAccuracy=[ValidationAccuracy; info.ValidationAccuracy];
         Tempo=[Tempo;t];
         
-        %Salvar resultado rede
+        %Save results of network
         aux10=strcat('Run_',num2str(i));
         mkdir (aux10)
         aux11=strcat(path3,aux10,'\Net.mat');
@@ -160,20 +160,20 @@ for i=1:L_i
         save (aux12,'info')
         
     catch exception
-        %salvar resultado experimental
+        %save experimental results
         filename='Result';
         local=strcat('A',num2str(i));
         escrita=[i Param];
         xlswrite([path3 '\Result.xls'],escrita,1,local)
         
-        %Salvar informações de todos os treinamentos
+        %Save info about all trainings
         TrainingLoss=[TrainingLoss; NaN];
         ValidationLoss=[ValidationLoss; NaN];
         TrainingAccuracy=[TrainingAccuracy; NaN];
         ValidationAccuracy=[ValidationAccuracy; NaN];
         Tempo=[Tempo;NaN];
         
-        %Salvar resultado rede
+        %Save network results
         aux10=strcat('Run_',num2str(i));
         mkdir (aux10)
         %exception = MException.last;
@@ -184,7 +184,7 @@ for i=1:L_i
     
 end
 
-%salvar variaveis
+%save variables
 TrainingLoss=completa(TrainingLoss);
 save TrainingLoss
 ValidationLoss=completa(ValidationLoss);
@@ -195,7 +195,7 @@ ValidationAccuracy=completa(ValidationAccuracy);
 save ValidationAccuracy
 save Tempo
 
-%Oprções extras
+% Extra options
 function stop = stopIfAccuracyNotImproving(info,N)
 
 %Possives alterações
@@ -212,9 +212,9 @@ function stop = stopIfAccuracyNotImproving(info,N)
 % State Current training state, with a possible value of "start", "iteration", or "done"
 
 
-% Mantem o rastreio das variaveis
-%bestValAccuracy - melhor valor de acurracia
-%valLag - o numero de vezes que não teve melhora na acrrurácia
+% Tracking variables
+%bestValAccuracy - best accuracy value
+%valLag - number of not improving
 stop = false;
 persistent bestValAccuracy
 persistent valLag
