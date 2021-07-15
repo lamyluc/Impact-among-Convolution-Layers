@@ -14,8 +14,27 @@ For models 2 and 3, the experimental table is [L16](https://www.york.ac.uk/depts
 For model4, the experimental table is [L32](https://www.york.ac.uk/depts/maths/tables/l32.htm).<br />
 
 
-# How to use
+# How to to run the code ?
 
 1- Make sure you have the datasets in your directory. <br />
 2-Download the scripts.<br />
 3-When use it, be aware of change the paths in scripts.<br />
+
+# Repository Structure
+
+Impact-among-Convolution-Layers
+├── cifar10
+│   ├── AlexNet.py
+│   ├── densenet.py
+│   ├── fc1.py
+│   ├── LeNet5.py
+│   ├── resnet.py
+│   └── vgg.py
+├── mnist
+│   ├── AlexNet.py
+│   ├── fc1.py
+│   ├── LeNet5.py
+│   ├── resnet.py
+│   └── vgg.py
+└── README.md
+
