@@ -1,4 +1,3 @@
-
 # Description
 
 The method used to evaluate the impact among convolution layers are an experimental approach.<br />
@@ -15,7 +14,7 @@ For models 2 and 3, the experimental table is [L16](https://www.york.ac.uk/depts
 For model4, the experimental table is [L32](https://www.york.ac.uk/depts/maths/tables/l32.htm).<br />
 
 
-# How to use
+# How to to run the code ?
 
 1- Make sure you have the datasets in your directory. <br />
 2- Download the scripts.<br />
