@@ -17,7 +17,7 @@ For model4, the experimental table is [L32](https://www.york.ac.uk/depts/maths/t
 # How to to run the code ?
 
 1- Make sure you have the datasets in your directory. <br />
-2-Download the scripts.<br />
-3-When use it, be aware of change the paths in scripts.<br />
+2- Download the scripts.<br />
+3- When use it, be aware of change the paths in scripts.<br />
 
 
