@@ -1,7 +1,6 @@
 %------------------------------------------------------------------------
 %------------------------------------------------------------------------
 %SET UP A EXPERIMENTAL TABLE
-
 L=[
     1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
     1 1 1 1 1 1 1 2 2 2 2 2 2 2 2;
@@ -20,13 +19,11 @@ L=[
     2 2 1 2 1 1 2 1 2 2 1 2 1 1 2;
     2 2 1 2 1 1 2 2 1 1 2 1 2 2 1;
     ];
-
-
 [L_i,L_j]=size(L);
 nivel=max(L);
 
-%sustituir parametros linha=fator, coluna=valores dos niveis
-%colocar variaveis escritas por ultimo
+%Replace hyperparameters, line=factor, column=levels
+%Set the hyperparameters non-numeric last
 nivel_par=[3 7; %fs1
            32 64; %nf1
            3 7; %fs2
@@ -42,7 +39,7 @@ nivel_par=[3 7; %fs1
            ];
        [n_p_i,n_p_j]=size(nivel_par);
 
-%troca
+%Replace the hyperparametrs values in experimental table
 for i=1:nivel
     for j=1:(min(L_j,n_p_i))
         aux=L(:,j)==i;
@@ -51,16 +48,16 @@ for i=1:nivel
 end
 M;
 
-%acha os valores a ser trocado por letras
+%Replace the hyperparametrs values in experimental table
 [f_i,f_j]=find(M==9);
 [f2_i,f2_j]=find(M==99);
 [f3_i,f3_j]=find(M==999);
 
 
-%cria a matriz versão cell
+%format transformation
 M2=num2cell(M);
 
-%substitui os valores escritos
+%Replace the hyperparametrs values in experimental table
 for i=1:numel(f_i)
     M2{f_i(i),f_j(i)}='reluLayer';
 end
@@ -69,7 +66,7 @@ for i=1:numel(f2_i)
 end
 M2;
 
-%tabela experimental já com os parametros
+%Experimental table
 [M_i,M_j]=size(M);
 
 %-------------------------------------------------------------------------
@@ -82,8 +79,7 @@ image_test=datastore(path2,'IncludeSubfolders',true,'LabelSource','foldernames')
 imds=augmentedImageDatastore([32 32], image_train);
 imdsValidation=augmentedImageDatastore([32 32], image_test);
 
-
-%variaveis para plots
+%variables used for plots
 TrainingLoss={};
 ValidationLoss={};
 TrainingAccuracy={};
@@ -93,10 +89,10 @@ Tempo=[];
 %TRAIN NETWORK
 for i=1:L_i
     i
-    %parametros
+    %Get the hyperparameters
     Param=M2(i,:);
     
-    %Definir Layers
+    %Set Layers
     act_str=cell2mat(Param(12));
     switch act_str
         case 'reluLayer'
@@ -121,7 +117,7 @@ for i=1:L_i
         softmaxLayer("Name","softmax")
         classificationLayer("Name","classoutput")];
     
-    %Definir Options
+    %Set Options
     options = trainingOptions('sgdm', ...
         'MaxEpochs',30, ...
         'ValidationData',imdsValidation, ...
@@ -214,9 +210,9 @@ function stop = stopIfAccuracyNotImproving(info,N)
 % State Current training state, with a possible value of "start", "iteration", or "done"
 
 
-% Mantem o rastreio das variaveis
-%bestValAccuracy - melhor valor de acurracia
-%valLag - o numero de vezes que não teve melhora na acrrurácia
+% Tracking variables
+%bestValAccuracy - best accuracy value
+%valLag - number of not improving
 stop = false;
 persistent bestValAccuracy
 persistent valLag
