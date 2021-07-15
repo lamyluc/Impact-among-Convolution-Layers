@@ -5,12 +5,21 @@ The method used to evaluate the impact among convolution layers are an experimen
 Scripts evaluate CNN's in an appropriate experimental design.<br />
 
 **available scripts:**<br />
-model1_p2.m - CNN based on Lenet.<br />
-model2_p2.m - CNN with 2 conv layer.<br />
-model3_p2.m - CNN with 4 conv layer.<br />
-model4_p2.m - CNN with 6 conv layer.<br />
+Model1_p2.m - CNN based on Lenet.<br />
+Model2_p2.m - CNN with 2 conv layer.<br />
+Model3_p2.m - CNN with 4 conv layer.<br />
+Model4_p2.m - CNN with 6 conv layer.<br />
 
-For models 2 and 3, the experimental table is [L16](https://www.york.ac.uk/depts/maths/tables/l16.htm). For model4, the experimental table is [L32](https://www.york.ac.uk/depts/maths/tables/l32.htm).<br />
+For models 1, the experimental table is [L12](https://www.york.ac.uk/depts/maths/tables/l12.gif).<br />
+For models 2 and 3, the experimental table is [L16](https://www.york.ac.uk/depts/maths/tables/l16.htm).<br />
+For model4, the experimental table is [L32](https://www.york.ac.uk/depts/maths/tables/l32.htm).<br />
+
+
+# How to use
+
+1- Make sure you have the datasets in your directory. <br />
+2-Download the scripts.<br />
+3-When use it, be aware of change the paths in scripts.<br />
 
 
 
