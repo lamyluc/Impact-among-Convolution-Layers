@@ -1,6 +1,6 @@
 # Description
 
-This session shows the graphics that support the analyzes performed on the networks. The method used to evaluate the impact among convolution layers are an experimental approach.<br />
+This session shows the graphics that support the analyzes performed on the networks. <br />
 
 **available images:**<br />
 Model1_p2.m - CNN based on Lenet.<br />
