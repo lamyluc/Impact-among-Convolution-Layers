@@ -3,7 +3,9 @@
 This session shows the graphics that support the analyzes performed on the networks. <br />
 
 **Available images:**<br />
-Model (abbreviation)<br />
+
+Model (abbreviation)<br /><br />
+
 Model1 (m1) <br />
 Model2 (m2) <br />
 Model3 (m3) <br />
