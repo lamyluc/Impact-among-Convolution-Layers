@@ -3,7 +3,7 @@
 This session shows the graphics that support the analyzes performed on the networks. <br />
 
 **Available images:**<br />
-Experimental table (table_m#)
+Experimental table (table_m#)<br />
 Main effect plots (MNIST_main_effect and CIFAR-10_main_effect)<br />
 Interaction plot (MNIST and CIFAR-10)<br />
 Heatmaps (heatmap). <br />
