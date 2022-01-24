@@ -3,9 +3,10 @@
 Code for study of impact among convolution layers on convolution Neural Networks (CNN).<br />
 Four different CNNs are shown. The first CNN is based on Lenet5, the next two are CNN 4-conv layers, and the last 8-conv layers CNN.<br />
 
-The main branch has two folders.<br />
+The main branch has the following folders.<br />
 Cifar10 - Code for Cifar-10 dataset<br />
 Mnist - Code for Mnist dataset<br />
+Results - supplementary results and charts <br />
 
 
 # Repository Structure
