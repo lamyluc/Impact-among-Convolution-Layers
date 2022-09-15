@@ -1,5 +1,5 @@
 # Impact-among-Convolution-Layers
-Read the publication [here](www.even3.com.br/Anais/cobicet2022/506977-IMPACT-AMONG-CONVOLUTIONAL-LAYERS).<br />
+Read the publication [here](https://www.even3.com.br/anais/cobicet2022/506977-impact-among-convolutional-layers/).<br />
 DOI: 10.29327/167942.3-139.<br />
 
 Code for study of impact among convolution layers on convolution Neural Networks (CNN).<br />
