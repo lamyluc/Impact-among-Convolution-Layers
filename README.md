@@ -1,4 +1,6 @@
 # Impact-among-Convolution-Layers
+Read the publication [here](www.even3.com.br/Anais/cobicet2022/506977-IMPACT-AMONG-CONVOLUTIONAL-LAYERS).<br />
+DOI: 10.29327/167942.3-139.<br />
 
 Code for study of impact among convolution layers on convolution Neural Networks (CNN).<br />
 Four different CNNs are shown. The first CNN is based on Lenet5, the next two are CNN 4-conv layers, and the last 8-conv layers CNN.<br />
